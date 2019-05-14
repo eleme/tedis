@@ -1,0 +1,39 @@
+{
+  "comment": "",
+  "ignore": "test",
+  "package": [
+    {
+      "path": "github.com/pingcap/tidb/kv",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/store/localstore",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/store/localstore/goleveldb",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/store/tikv",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/terror",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/util/codec",
+      "revision": ""
+    },
+    {
+      "path": "github.com/pingcap/tidb/util/testleak",
+      "revision": ""
+    },
+    {
+      "path": "google.golang.org/appengine/datastore",
+      "revision": ""
+    }
+  ],
+  "rootPath": "ekvproxy/proxy"
+}
