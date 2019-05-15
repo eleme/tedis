@@ -1,13 +1,13 @@
 # EKVProxy 
-EKVProxy 是一个支持redis 协议的TiKV 的代理层。
+EKVProxy 是一个支持redis 协议的Tikv 的代理层。
 
 ## 简介
-* EKVProxy 针对TiKV做的一个代理层，其兼容redis 的部分数据结构string、hash的大部分接口；
-* EKVProxy 的组成包括支持事务版本的proxy，支持非事务版本的rawproxy，用于调用TiDB 的gc和用于删除过期数据的ttltask。
-* EKVProxy 的工作机理是通过TiDB的pd 获取路由信息，然后通过hash的方式将具体的请求发送到指定的server上，通过这种方式讲不同的请求发送到不同的节点上。
+* EKVProxy 针对Tikv做的一个代理层，其兼容redis 的部分数据结构string、hash的大部分接口；
+* EKVProxy 的组成包括支持事务版本的proxy，支持非事务版本的rawproxy，用于调用Tikv 的gc和用于删除过期数据的ttltask。
+* EKVProxy 的工作机理是通过Ti的pd 获取路由信息，然后通过hash的方式将具体的请求发送到指定的server上，通过这种方式讲不同的请求发送到不同的节点上。
 
 ## 特点
-* 支持ridis协议。
+* 支持redis协议。
 * 支持多节点分布式部署，从而减轻代理层的压力和提高代理层的安全性。
 * 支持事务和非事务两种版本。
 * 采用go语言编写。
