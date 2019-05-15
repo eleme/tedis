@@ -25,12 +25,12 @@ EKVProxy 是一个支持redis 协议的TiKV 的代理层。
 #### proxy 参数说明
 ```
 -v		proxy 版本信息
--port	proxy 提供服务的端口
--conf   proxy配置文件的文件名
+-port		proxy 提供服务的端口
+-conf   	proxy配置文件的文件名
 -pd		TiDB的 pd 节点的地址 如：127.0.0.1:2379
 -lp		日志保存目录
 -ll		proxy 日志打印级别 如："info"
--kpdays 日志保留时间 如："7"， 保留7天
+-kpdays 	日志保留时间 如："7"， 保留7天
 -it		是否忽略ttl信息，因为TiKV是采用ttltask 对数据进行清除的，数据的清除不具有实时性，可能read的key已经过期
 -ct		链接保持的超时时间
 -td		请求超时时间
@@ -45,9 +45,9 @@ EKVProxy 是一个支持redis 协议的TiKV 的代理层。
 ```
 -v		ttltask 版本信息
 -fs		当耗时超过改时间时，将停止运行
--pd     TiDB的 pd 节点的地址 如：127.0.0.1:2379
--lp     日志保存目录
--ll     proxy 日志打印级别 如："info"
+-pd    		TiDB的 pd 节点的地址 如：127.0.0.1:2379
+-lp     	日志保存目录
+-ll     	proxy 日志打印级别 如："info"
 -cn		并发数量
 -td		请求超时时间
 -pp		prometheus 服务端口
@@ -64,7 +64,7 @@ nohup rawkvproxy" \
         -pd "127.0.0.1:10001,127.0.0.1:10001,127.0.0.1:10001" \
         -port "6390" \
         -td "1500" \
-		-ct 3600 \
+	-ct 3600 \
 	2> "./log/ttltask_stderr.log"
 ```
 #### gc 运行方式
@@ -75,9 +75,9 @@ nohup bin/gc" -pd "127.0.0.1:10001,127.0.0.1:10001,127.0.0.1:10001" 2> "./log/tt
 ```
 nohup ttltask" \
         -cn "5" \
-		-fs "1000" \
+	-fs "1000" \
         -ll "error" \
         -lp "./log/ttltask.log" \
         -pd "127.0.0.1:10001,127.0.0.1:10001,127.0.0.1:10001" \
-    2> "./log/ttltask_stderr.log"
+    	2> "./log/ttltask_stderr.log"
 ```
